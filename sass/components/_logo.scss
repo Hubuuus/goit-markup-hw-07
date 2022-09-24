@@ -1,0 +1,21 @@
+$brand-color: #2196f3;
+$logo-second-color: #000000;
+$text-on-dark-background: #ffffff;
+$site-fonts-releway: "Raleway", sans-serif;
+
+.logo {
+  color: $logo-second-color;
+  font-family: $site-fonts-releway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  word-spacing: 0;
+  text-decoration: none;
+  &--footer {
+    color: $text-on-dark-background;
+  }
+  .web-blue {
+    color: $brand-color;
+  }
+}

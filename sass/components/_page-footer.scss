@@ -1,0 +1,99 @@
+$brand-background-color: #2f303a;
+$text-on-dark-background: #ffffff;
+$background-footer-social-icon: #ffffff1a;
+
+.footer-background {
+  background-color: $brand-background-color;
+  width: 100%;
+  height: 252px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  &__first-item {
+    padding-top: 60px;
+    margin-right: 70px;
+    min-width: 246px;
+  }
+  &__second-item {
+    padding-top: 72px;
+    margin-right: 78px;
+  }
+  &__third-item {
+    padding-top: 72px;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 20px;
+  &__address {
+    color: $text-on-dark-background;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+  &__links {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+  }
+}
+.footer-heading {
+  color: $text-on-dark-background;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+
+.footer-submit {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  padding-top: 20px;
+  &__input {
+    box-sizing: border-box;
+    width: 358px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    color: var(--text-on-dark-background);
+    padding-left: 16px;
+    &:required {
+      background-color: var(--brand-background-color);
+    }
+  }
+  &__button {
+    background: $brand-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: $text-on-dark-background;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-left: 42px;
+    fill: $text-on-dark-background;
+  }
+}
+.icon-social-footer {
+  fill: $text-on-dark-background;
+  background-color: $background-footer-social-icon;
+}

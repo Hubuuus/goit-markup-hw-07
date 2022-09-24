@@ -1,0 +1,26 @@
+$brand-color: #2196f3;
+$background-button-color: #f5f4fa;
+$text-on-dark-background: #ffffff;
+$brand-article-color: #212121;
+$transition-brand: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+.button {
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  border: none;
+  background-color: $background-button-color;
+  color: $brand-article-color;
+  padding: 6px 22px 6px 22px;
+  border-radius: 4px;
+  transition: $transition-brand;
+  &:hover,
+  &:focus {
+    background-color: $brand-color;
+    color: $text-on-dark-background;
+    outline-color: $brand-color;
+    cursor: pointer;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}

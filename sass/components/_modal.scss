@@ -1,0 +1,182 @@
+$text-on-dark-background: #ffffff;
+$item-gray: #757575;
+$brand-color: #2196f3;
+$brand-article-color: #212121;
+$logo-second-color: #000000;
+$transition-brand: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transitiom-modal: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+$site-fonts-roboto: "Roboto", sans-serif;
+
+.backdrop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 500ms $transitiom-modal;
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: $transitiom-modal;
+}
+.modal {
+  position: relative;
+  height: 581px;
+  width: 528px;
+  background-color: $text-on-dark-background;
+  border-radius: 4px;
+  &__label {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: $item-gray;
+  }
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+  }
+  &__svg {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 12px;
+    bottom: 21px;
+    // fill: $brand-article-color;
+  }
+  &__input {
+    box-sizing: border-box;
+    min-width: 448px;
+    min-height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    padding-left: 42px;
+    transition: $transition-brand;
+  }
+  &__textarea {
+    box-sizing: border-box;
+    min-height: 120px;
+    min-width: 448px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 4px;
+    resize: none;
+  }
+  &__heading {
+    height: 23px;
+    width: 448px;
+    font-family: $site-fonts-roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    padding-bottom: 12px;
+  }
+  &__button {
+    margin-top: 30px;
+    background: $brand-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: $text-on-dark-background;
+  }
+}
+.input-focus {
+  &:hover,
+  &:focus {
+    fill: $brand-color;
+    border-color: $brand-color;
+    & > :nth-child(n) {
+      fill: $brand-color;
+    }
+  }
+}
+.check-off {
+  appearance: none;
+}
+.check {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  &__svg {
+    width: 16px;
+    height: 15px;
+    fill: $brand-color;
+    border-radius: 2px;
+    transition: $transition-brand;
+  }
+  &::before {
+    display: block;
+    top: 4px;
+    box-sizing: border-box;
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 2px solid $brand-article-color;
+    border-radius: 4px;
+    transition: transform 0.5s;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    transition: $transition-brand;
+  }
+}
+input:not(:checked) + .check > svg {
+  opacity: 0;
+  transition: $transition-brand;
+}
+.check-off:checked + .check::before {
+  border: none;
+  opacity: 1;
+}
+
+.links-modal {
+  color: $brand-color;
+}
+.check-text {
+  font-family: $site-fonts-roboto;
+  height: 24px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: $item-gray;
+  margin-left: 7px;
+}
+.background-heading__title--button:hover > data-modal-open {
+  transform: translate(10%, 100%);
+  visibility: hidden;
+}
+.close {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  right: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  top: 8px;
+  fill: $logo-second-color;
+  cursor: pointer;
+  transform: scale(1.1);
+}
